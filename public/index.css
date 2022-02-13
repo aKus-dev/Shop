@@ -1,0 +1,326 @@
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --orange-light: hsl(25, 80%, 72%);
+    --gray-primary: hsl(220, 13%, 13%);
+    --gray--secondary: hsl(219, 9%, 45%);
+    --gray--tertiary: hsl(220, 14%, 75%);
+    --white-primary:  hsl(0, 0%, 100%);
+    --white--secondady: hsl(223, 64%, 98%);
+    --black: hsl(0, 0%, 0%);
+    --price: hsl(219, 9%, 45%);
+}
+html {
+    overflow-x: hidden;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: inherit;
+}
+img {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+.logo {
+    height: 100%;
+}
+.succcess-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+.success {
+    text-align: center;
+    border-radius: .5rem;
+    padding: .8rem;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 85%;
+    max-width: 65rem;
+    margin: 2rem auto;
+    background: linear-gradient(90deg, #45eb40, #169111);
+}
+
+/* HEADER */
+.header {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.header__logo {
+    transition: .45s;
+}
+.header__logo:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+/* CART */
+.cart-container {
+    text-align: center;
+}
+.cart-container {
+    text-align: center;
+}
+.empty {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+.cart-product {
+    display: flex;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+}
+.checkout {
+    max-width: 60rem;
+    margin: 0 auto 4rem auto;
+    padding: 0 3rem;
+}
+.checkout button {
+    margin: 0;
+}
+.checkout h2 {
+    color: var(--gradient-primary);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    text-align: left;
+    margin: 0 0 1.5rem 0;
+}
+.img-cart {
+    height: 15rem;
+}
+.delete {
+    cursor: pointer;
+    display: block;
+    margin-top: 1rem;
+    width: 2.3rem;
+}
+.info {
+    flex-grow: 1;
+    padding-left: 1.5rem;
+    text-align: left;
+    font-size: 1.7rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--price);
+}
+.cart-container h1 {
+    text-transform: uppercase;
+}
+
+.cart {
+    position: relative;
+}
+.cart__length {
+    position: absolute;
+    font-size: 1.3rem;
+    right: -1rem;
+    top: -1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--orange);
+    color: var(--white-primary);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart__logo {
+    cursor: pointer;
+    height: 2.7rem;
+}
+/* MAIN */
+.main {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+.prodcut__img-container {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.product__img {
+    width: 100%;
+    transition: .45s;
+}
+
+.product {
+    animation: fadeIn .85s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.product:hover .product__img {
+    transform: scale(1.2)
+}
+
+.product__data {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.product__name {
+    color: var(--gray-primary);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.product:hover .product__name {
+    text-decoration: underline;
+}
+
+.product__price {
+    color: var(--gray--secondary);
+    font-size: 1.8rem;
+}
+/* PRODUCT SCREEN */
+.product-view {
+    display: block;
+    width: 90%;
+    margin: 2rem auto 0 auto;
+    animation: fadeIn .65s linear;
+}
+
+@media(min-width: 768px) {
+    .product-view  {
+        animation: fadeInLeft .65s linear;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .product-screen {
+        min-height: 100vh;
+
+        max-width: 120rem;
+        margin: auto;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.product-info {
+    width: 90%;
+    margin: auto;
+    padding-top: 2rem;
+    animation: fadeIn .65s ease-in-out;
+}
+
+@media(min-width: 768px) {
+    .product-info  {
+        animation: fadeInRight .65s linear;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.product-info h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--gray-primary);
+}
+.product-info p {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--gray--secondary);
+}
+.product-info span {
+    display: block;
+    margin: 2rem 0;
+    color: var(--gray-primary);
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+.quiantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white--secondady);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    font-weight: bold;
+    user-select: none; 
+}
+.quiantity img {
+    cursor: pointer;
+}
+.quiantity p {
+    color: var(--gray-primary)
+}
+.add-btn {
+    transition: .45s;
+    cursor: pointer;
+    margin: 3rem 0;
+    padding: 1.8rem 0;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 1rem;
+    width: 100%;
+    color: white;
+    font-size: 1.7rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.add-btn:hover {
+    background-color: var(--orange-light);
+}
+.max-width {
+    max-width: 40rem;
+}
+/* KEYFRAMES */
