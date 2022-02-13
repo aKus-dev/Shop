@@ -1,1 +1,3 @@
-# Shop App
+# Shop App made with React
+
+
